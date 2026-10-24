@@ -1,0 +1,5 @@
+<h2>class-desk 로그인</h2>
+<p>아래 버튼을 눌러 로그인하세요. 본인이 요청하지 않았다면 이 메일을 무시하세요.</p>
+<!-- ConfirmationURL(PKCE ?code=) 대신 TokenHash를 쓴다 — 다른 기기에서 열어도 된다. /auth/confirm이 verifyOtp(token_hash, "email")로 받는다. -->
+<p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email" style="display:inline-block;padding:10px 20px;background:#111;color:#fff;text-decoration:none;border-radius:4px">로그인하기</a></p>
+<p style="color:#888;font-size:12px">버튼이 안 눌리면 이 주소를 복사해 브라우저에 붙여넣으세요: {{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email</p>

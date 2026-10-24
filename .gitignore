@@ -1,0 +1,89 @@
+# =============================================================================
+# class-desk — 공개 저장소용 보안 강화 .gitignore
+# 레퍼런스: taxlaw-rag (.gitignore) 보안 정책 준수
+# =============================================================================
+
+# 1. 보안 키 · 자격증명 · 환경 변수 (절대 유출 금지)
+.env
+.env.*
+*.env
+!.env.example
+!.env*.example
+.envrc
+.env.backup
+*.env.bak
+**/secrets.json
+**/credentials.json
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+
+# 2. Next.js 빌드 및 캐시 출력물
+.next/
+out/
+build/
+dist/
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# 3. 가상환경 및 패키지 의존성
+node_modules/
+.pnp
+.pnp.js
+
+# 4. OS 및 시스템 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 5. IDE · 도구 설정 및 AI 에이전트 캐시
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursor/
+.cursorignore
+.claude/*
+!.claude/CLAUDE.md
+.aider*
+
+# 6. 개발용 에이전트 지침 및 비공개 내부 메모
+AGENTS.md
+CLAUDE.md
+SECURITY.md
+POLICY.md
+notes.md
+/local/
+
+# 7. 실행 로그 및 디버그 캡처
+logs/
+**/logs/
+*.log
+debug-*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+supabase_err.log
+
+# 8. 테스트 실행 산출물 및 리포트
+test-results/
+playwright-report/
+playwright/.cache/
+coverage/
+.coverage
+htmlcov/
+
+# 9. 백업 · 임시 파일 · DB 덤프
+backup/
+backups/
+dumps/
+*.bak
+*.backup
+*.dump
+*.sql.gz
+*_dump.sql
+supabase/.branches/
+supabase/.temp/

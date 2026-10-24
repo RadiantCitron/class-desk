@@ -1,0 +1,13 @@
+{
+  "eventType": "PAYMENT_STATUS_CHANGED",
+  "createdAt": "2026-09-25T10:02:00.000000",
+  "data": {
+    "paymentKey": "toss-payment-key-3",
+    "orderId": "33333333-3333-4333-8333-333333333333",
+    "status": "WAITING_FOR_DEPOSIT",
+    "totalAmount": 50000,
+    "method": "가상계좌",
+    "lastTransactionKey": "toss-tx-vbank-1",
+    "cancels": null
+  }
+}

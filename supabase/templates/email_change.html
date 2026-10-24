@@ -1,0 +1,8 @@
+<h2>class-desk 이메일 변경 확인</h2>
+<p>아래 버튼을 눌러 이메일 변경을 확인하세요. 본인이 요청하지 않았다면 이 메일을 무시하고,
+   계정이 걱정되면 로그인해 상태를 확인하세요.</p>
+<!-- double_confirm_changes = true라 옛 이메일·새 이메일 둘 다 이 메일을 받고 둘 다 눌러야
+     변경이 끝난다. /auth/confirm이 verifyOtp(token_hash, "email_change")로 받고,
+     users.email 동기화는 그 라우트에서 sync_my_email()로 한다. -->
+<p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email_change" style="display:inline-block;padding:10px 20px;background:#111;color:#fff;text-decoration:none;border-radius:4px">이메일 변경 확인</a></p>
+<p style="color:#888;font-size:12px">버튼이 안 눌리면 이 주소를 복사해 브라우저에 붙여넣으세요: {{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email_change</p>
